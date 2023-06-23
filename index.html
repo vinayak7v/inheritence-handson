@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <h3>Q1:-Create 2 objects - parent and child. Attach methods to parent and use those methods in child object using parents prototype</h3>
+    <pre class="ans">Ans:-
+       const parent = {
+           surname : 'Oneway',
+           display : function(){
+               console.log(('Hey Parent...!'));
+           }
+       }
+       
+       const child1 = Object.create(parent);
+       child1.name = "vinayak"
+       console.log(child1);
+       
+       console.log(`${child1.name} ${child.surname}`);
+       
+       
+       const child2 = Object.create(parent);
+       console.log(child1.surname);
+       child2.display();
+       
+    </pre>
+    <hr>
+
+    <h3>Q2:-Write code to explain prototype chaining</h3>
+    <pre  class="ans">Ans:-const grandParent = {
+       sayHi : function(){
+           console.log(`GrandParent Say Hi to everyone`);
+       }
+   }
+   
+   const Parent = Object.create(grandParent);
+   parent.sayHello = function(){
+       console.log(`Parent say Hello to everyone`);
+   }
+   
+   const child = Object.create(parent);
+   child.sayGoodBy = function(){
+       console.log(`Children say Good bye...`);
+   }
+   
+   child.sayHi();
+   child.sayHello();
+   child.sayGoodBy();
+   </pre>
+    <hr>
+
+    <h3>Q3:-Add a method to calculate sum of all elements in Array in array's protype, use that method to calculate sum for multiple arrays</h3>
+    <pre  class="ans">Ans:- const arr = [1,,2,3,4,,5,6,7,8,9]
+       let sum = arr.reduce((prev,current) => prev +=current, 0)
+       console.log(sum);
+   
+   </pre>
+    <hr>
+
+    <h3>Q4:-Write a JavaScript function to retrieve all the names of object's own and inherited properties.</h3>
+    <pre  class="ans">Ans:-const user = {
+       name: 'jhon',
+       age: 30
+     }
+ 
+     const props = Object.getOwnPropertyNames(user)
+ 
+     console.log(props);</pre>
+
+    
+</body>
+<script src="./script.js"></script>
+</html>
